@@ -16,14 +16,29 @@ const MainForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(formSubmit)}>
-      <div>Main Form</div>
+    <form className="bg-red-200 m-10 p-10 rounded" onSubmit={handleSubmit(formSubmit)}>
+      <div >Main Form</div>
+      <FormInput
+      label={"Enter your Name"}
+
+        name={"enterName"}
+        placeholder={"Enter Your Name"}
+        register={register("enterName")}
+      />
+      <FormInput
+            label={"Enter"}
+
+        name={"enterName"}
+        placeholder={"Enter Your Name"}
+        register={register("enterName")}
+      />
       <FormInput
         name={"enterName"}
         placeholder={"Enter Your Name"}
         register={register("enterName")}
       />
       <FormSelect name={"select"} register={register("select")} />
+      
       <SubmitButton label={"Submit Now"} />
     </form>
   );
