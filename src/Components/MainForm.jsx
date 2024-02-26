@@ -20,6 +20,7 @@ const MainForm = () => {
       <div>Main Form</div>
       <FormInput
         name={"enterName"}
+        label={"Enter Your Name Pls?"}
         placeholder={"Enter Your Name"}
         register={register("enterName")}
       />
