@@ -2,9 +2,26 @@ import { useForm } from "react-hook-form";
 import FormInput from "./FormInput";
 import SubmitButton from "./SubmitButton";
 import FormSelect from "./FormSelect";
-
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { db } from "../Firebase";
 import { addDoc, collection } from "firebase/firestore";
+
+const formSchema = z.object({
+  enterName: z
+    .string()
+    .min(3, { message: "Name must be at least 3 characters" })
+    .max(20, { message: "Name must be at most 20 characters" }),
+  enterTitle: z
+    .string()
+    .min(10, { message: "Title must be at least 10 characters" })
+    .max(100, { message: "Title must be at most 20 characters" }),
+  enterThumbnail: z.string(),
+  enterDuration: z.string(),
+  enterProfile: z.string(),
+
+  select: z.string(),
+});
 
 const MainForm = () => {
   const {
@@ -12,7 +29,7 @@ const MainForm = () => {
     handleSubmit,
     formState: { errors },
     reset,
-  } = useForm();
+  } = useForm({ resolver: zodResolver(formSchema) });
 
   const formSubmit = async (data) => {
     const querySnapshot = await addDoc(collection(db, data.select), data);
@@ -38,12 +55,14 @@ const MainForm = () => {
           name={"enterName"}
           placeholder={"Enter Your Name"}
           register={register("enterName")}
+          error={errors.enterName}
         />
         <FormInput
           label={"Enter  your video title"}
           name={"enterTitle"}
           placeholder={"Enter Your video title"}
           register={register("enterTitle")}
+          error={errors.enterTitle}
         />
         <FormInput
           name={"enterDuration"}
@@ -51,18 +70,21 @@ const MainForm = () => {
           placeholder={"Enter the Duration"}
           register={register("enterDuration")}
           type="number"
+          error={errors.enterDuration}
         />
         <FormInput
           name={"enterThumbnail"}
           label={"Enter the Thumbnail URL"}
           placeholder={"Enter your Thumbnail URL"}
           register={register("enterThumbnail")}
+          error={errors.enterThumbnail}
         />
         <FormInput
           name={"enterProfile"}
           label={"Enter the Profile URL"}
           placeholder={"Enter your Thumbnail URL"}
           register={register("enterProfile")}
+          error={errors.enterProfile}
         />
 
         <FormSelect
