@@ -1,13 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <div className="bg-[#003566] text-white flex items-center justify-between px-5 py-3">
-      <h2 className="text-2xl font-bold">VTUBE</h2>
+      <Link to={"/"} className="text-2xl font-bold">VTUBE</Link>
       <div className="flex gap-5">
-        <button className="bg-white px-5 py-1 font-bold rounded text-[#003566]">
+        <Link to={"/add-videos"} className="bg-white px-5 py-1 font-bold rounded text-[#003566]">
           ADD
-        </button>
+        </Link>
         <div className="h-8 w-8 rounded-full bg-gray-400 flex items-center justify-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"

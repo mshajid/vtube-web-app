@@ -1,16 +1,10 @@
-import { Outlet } from "react-router-dom";
-import CardComponent from "./Components/CardComponent";
-import MainForm from "./Components/MainForm";
-import Navbar from "./Components/Navbar";
-import { db } from "./Firebase";
 
-const App = () => {
+import CardComponent from "../Components/CardComponent";
+
+const HomePage = () => {
   return (
     <>
-      <Navbar />
-      <Outlet />
       <div className="flex gap-x-2 flex-wrap gap-y-1">
-        {/* <CardComponent />
         <CardComponent />
         <CardComponent />
         <CardComponent />
@@ -21,10 +15,11 @@ const App = () => {
         <CardComponent />
         <CardComponent />
         <CardComponent />
-        <CardComponent /> */}
+        <CardComponent />
+        <CardComponent />
       </div>
     </>
   );
 };
 
-export default App;
+export default HomePage;
