@@ -1,8 +1,7 @@
 import { useForm } from "react-hook-form";
-import FormInput from "./FormInput";
+import FormInput from "./FormInput/";
 import SubmitButton from "./SubmitButton";
 import FormSelect from "./FormSelect";
-
 const MainForm = () => {
   const {
     register,
