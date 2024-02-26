@@ -1,3 +1,5 @@
+import { db } from "./Firebase"; 
+
 const App = () => {
   return (
     <>
