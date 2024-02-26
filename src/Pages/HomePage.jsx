@@ -8,14 +8,14 @@ const HomePage = () => {
 
   useEffect(() => {
     async function reSongs() {
-      const querySnapshot = await getDocs(collection(db, "Songs"))
+      const querySnapshot = await getDocs(collection(db, "Songs"));
       const mappedData = querySnapshot.docs.map((doc) => {
         const getId = doc.id;
         const getDocs = doc.data();
-        const mergedData = { id: getId, ...getDocs }
-        return mergedData
-      })
-      getSongs(mappedData)
+        const mergedData = { id: getId, ...getDocs };
+        return mergedData;
+      });
+      getSongs(mappedData);
     }
     reSongs();
   }, []);
@@ -23,9 +23,15 @@ const HomePage = () => {
   return (
     <>
       <div className="flex gap-x-2 flex-wrap gap-y-1">
-        <CardComponent />
         {songs.map((data) => {
-          return <h1 className="text-white">{data.enterName}</h1>;
+          return (
+            <CardComponent
+              name={data.enterName}
+              title={data.enterTitle}
+              duration={data.enterDuration}
+              thumbnail={data.thumbnail}
+            />
+          );
         })}
       </div>
     </>

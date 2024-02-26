@@ -1,14 +1,14 @@
-const CardComponent = () => {
+const CardComponent = ({ name, title, duration, thumbnail }) => {
   return (
     <div className="flex flex-col py-5 px-1 m-1 flex-wrap">
       <section className="relative w-[280px] h-[150px]">
         <img
-          src="https://e1.pxfuel.com/desktop-wallpaper/664/468/desktop-wallpaper-beautiful-world-best-pic-in-the-world-best-most-beautiful-places-on-earth.jpg"
+          src={thumbnail}
           alt=""
-          className="w-[280px] h-[150px] rounded-2xl object-cover "
+          className="w-[280px] h-[150px] rounded-2xl object-cover"
         />
         <span className="px-1 py-1 rounded bg-gray-800 text-xs text-white absolute bottom-1 right-2">
-          04:50
+          {duration}
         </span>
       </section>
       <section className="flex gap-3 mt-4 items-center">
@@ -20,9 +20,9 @@ const CardComponent = () => {
           />
         </div>
         <div>
-          <h1 className="text-[15px] font-medium text-wrap text-white tracking-wide">TITLE FOR YOUR VIDEO</h1>
+          <h1 className="text-[15px] font-medium text-wrap text-white tracking-wide">{title}</h1>
           <div className="flex flex-col">
-            <p className="text-gray-500 text-[14px]">StartToons</p>
+            <p className="text-gray-500 text-[14px]">{name}</p>
             <div className="flex items-center gap-2 ">
               {/* <p className="text-gray-500 text-[14px]">6.3K views</p>
               <svg

@@ -17,7 +17,7 @@ const formSchema = z.object({
     .min(10, { message: "Title must be at least 10 characters" })
     .max(100, { message: "Title must be at most 20 characters" }),
   enterThumbnail: z.string(),
-  enterDuration: z.string(),
+  enterDuration: z.number(),
   enterProfile: z.string(),
 
   select: z.string(),
