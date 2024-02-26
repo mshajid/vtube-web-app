@@ -3,6 +3,9 @@ import FormInput from "./FormInput";
 import SubmitButton from "./SubmitButton";
 import FormSelect from "./FormSelect";
 
+import { db } from "../Firebase"; 
+import { addDoc, collection } from "firebase/firestore";
+
 const MainForm = () => {
   const {
     register,
@@ -11,10 +14,13 @@ const MainForm = () => {
     reset,
   } = useForm();
 
-  const formSubmit = (data) => {
-    console.log(data);
+  const formSubmit = async(data) => {
+      const querySnapshot = await addDoc(collection(db, data.select), data)
+      console.log(querySnapshot)
     reset();
   };
+
+
 
   return (
     <form

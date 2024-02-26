@@ -1,6 +1,6 @@
 const CardComponent = () => {
   return (
-    <div className="flex flex-col py-10 px-2 flex-wrap">
+    <div className="flex flex-col py-5 px-1 m-1 flex-wrap">
       <section className="relative w-[280px] h-[150px]">
         <img
           src="https://e1.pxfuel.com/desktop-wallpaper/664/468/desktop-wallpaper-beautiful-world-best-pic-in-the-world-best-most-beautiful-places-on-earth.jpg"
