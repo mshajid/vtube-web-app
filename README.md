@@ -1,8 +1,94 @@
-# React + Vite
+## Table of Contents 
+1. [Project Title]()
+2. [About the Project]()
+    - [Built with]()
+3. [Getting Started]()
+    - [Prerequisties]()
+    - [Installation]()
+4. [Usage]()
+5. [Roadmap]()
+6. [Contribution]()
+7. [License]()
+8. [Contact]()
+9. [Acknowlwdgements]()
+10. [Screenshots]()
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Title
+## VTube 
+#### We came up with this name for our project because it was a collabrative project and as a group of people working on the concept, we finalized upon this project name .
 
-Currently, two official plugins are available:
+    
+## About the Project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### This project was given by [CyberDude Networks Pvt.Ltd.]() as a SkillAnalyse for the six months Internship Program.
+
+#### This Project outline was given by [Anbuselvan]() our mentor.
+#### The concept was to build an Frontend and a Backend and display the UI based on the databases and also use CRUD opreations on the project 
+
+### Built with 
+
+- [HTML5]()
+- [TailwindCSS]()
+- [ReactJS]()
+- [Firebase]()
+
+
+## Prerequisties
+- Concept for the given project outline.
+- Basic UI and backend idology regarding the project .
+- Frondend stack 
+- Backend stack 
+- Databases 
+
+### Installation 
+#### Scripting Requirements
+
+- open terminal and create a folder using the below command and select React as client side server
+    -     npm create vite@latest
+
+- once vite is installed, open the Tailwindcss documentation , and follow the procedure to install vite in the frameworks guides.
+
+- type these in the terminal to set up the vite 
+    - npm install -D tailwindcss postcss autoprefixer
+    - npx tailwindcss init -p
+
+
+- Configure the files in tailwind.config.js
+
+    - content: [
+    "./index.html",
+    "./src/*/.{js,ts,jsx,tsx}",
+  ],
+    
+- For the proper use of stylling to the project , cofigure
+
+    - content: [
+    "./index.html",
+    "./src/*/.{js,ts,jsx,tsx}",
+  ],
+
+  - once complete the above steps the vite is ready to run 
+  - to run the vite use 
+    - npm run dev
+
+- for smooth navigation and for functionality install 
+    - npm install react-hook-forms
+and
+    - npm install react-router-dom
+#### Backend Requirements
+
+- For the backend and databases , we have used Firebase
+
+- install Firebase 
+    - npm install firebase
+
+for validation, used Zod
+    
+### Screenshots
+
+- Initial draftings of form and output card
+![alt text](<WhatsApp Image 2024-02-26 at 10.36.39_15ff28f7.jpg>)
+
+![alt text](<WhatsApp Image 2024-02-26 at 10.36.39_8978c41b.jpg>)
+
+- Initial UI draft
