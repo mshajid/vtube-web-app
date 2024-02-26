@@ -29,7 +29,8 @@ const HomePage = () => {
               name={data.enterName}
               title={data.enterTitle}
               duration={data.enterDuration}
-              thumbnail={data.thumbnail}
+              thumbnail={data.enterThumbnail}
+              avatar={data.enterProfile}
             />
           );
         })}

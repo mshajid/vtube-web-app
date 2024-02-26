@@ -1,4 +1,4 @@
-const CardComponent = ({ name, title, duration, thumbnail }) => {
+const CardComponent = ({ name, title, duration, thumbnail, avatar }) => {
   return (
     <div className="flex flex-col py-5 px-1 m-1 flex-wrap">
       <section className="relative w-[280px] h-[150px]">
@@ -14,13 +14,15 @@ const CardComponent = ({ name, title, duration, thumbnail }) => {
       <section className="flex gap-3 mt-4 items-center">
         <div>
           <img
-            src="https://media.istockphoto.com/id/1317804578/photo/one-businesswoman-headshot-smiling-at-the-camera.jpg?b=1&s=612x612&w=0&k=20&c=XdZqQ92Yk82otKZio_pE0KURn0U08sIr5Vz9bFSm7bM="
-            alt=""
+            src={avatar}
+            alt={title}
             className="w-10 h-10 object-cover rounded-full"
           />
         </div>
         <div>
-          <h1 className="text-[15px] font-medium text-wrap text-white tracking-wide">{title}</h1>
+          <h1 className="text-[15px] font-medium text-wrap text-white tracking-wide">
+            {title}
+          </h1>
           <div className="flex flex-col">
             <p className="text-gray-500 text-[14px]">{name}</p>
             <div className="flex items-center gap-2 ">
