@@ -1,10 +1,11 @@
-const FormInput = ({ name, placeholder, register, label }) => {
+const FormInput = ({ type="text",name, placeholder, register, label, }) => {
   return (
-    <div className="flex flex-col">
-      <label htmlFor={name}>{label}</label>
+    <div className="flex flex-col ">
+      <label className="mt-4 "htmlFor={name}>{label}</label>
       <input
-        className="w-80 rounded outline-none"
+        className="w-80 rounded outline-none px-4 py-2 mt-1 text-black "
         name={name}
+        type={type}
         placeholder={placeholder}
         {...register}
       />
