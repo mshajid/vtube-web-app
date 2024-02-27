@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 import React, { useState } from "react";
 import {
   motion,
@@ -9,7 +9,7 @@ import {
 } from "framer-motion";
 
 export const AnimatedTooltip = ({ items }) => {
-  const [hoveredIndex, setHoveredIndex] = (useState < number) | (null > null);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
   const springConfig = { stiffness: 100, damping: 5 };
   const x = useMotionValue(0); // going to set this value on mouse move
   // rotate the tooltip
@@ -25,6 +25,18 @@ export const AnimatedTooltip = ({ items }) => {
   const handleMouseMove = (event) => {
     const halfWidth = event.target.offsetWidth / 2;
     x.set(event.nativeEvent.offsetX - halfWidth); // set the x value, which is then used in transform and rotate
+  };
+
+  const MyComponent = ({ src, url, height, width }) => {
+    return (
+      <img
+        src={src}
+        alt="Image"
+        height={height}
+        width={width}
+        className="object-cover !m-0 !p-0 object-top rounded-full h-14 w-14 border-2 group-hover:scale-105 group-hover:z-30 border-white relative transition duration-500"
+      />
+    );
   };
 
   return (
@@ -67,7 +79,7 @@ export const AnimatedTooltip = ({ items }) => {
               </motion.div>
             )}
           </AnimatePresence>
-          <Image
+          <MyComponent
             onMouseMove={handleMouseMove}
             height={100}
             width={100}
