@@ -27,14 +27,15 @@ export const AnimatedTooltip = ({ items }) => {
     x.set(event.nativeEvent.offsetX - halfWidth); // set the x value, which is then used in transform and rotate
   };
 
-  const MyComponent = ({ src, url, height, width, className }) => {
+  const MyComponent = ({ src, alt, height, width, className, onMouseMove}) => {
     return (
       <img
         src={src}
-        alt="Image"
+        alt={alt}
         height={height}
         width={width}
         className={className}
+        onMouseMove={onMouseMove}
       />
     );
   };

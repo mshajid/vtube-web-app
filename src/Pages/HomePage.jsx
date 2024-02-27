@@ -25,7 +25,6 @@ const HomePage = () => {
 
   return (
     <>
-      <AnimatedTooltipPreview />
       <BackgroundBoxesDemo />
       <div className="flex gap-x-2 flex-wrap gap-y-1">
         {songs.map((data) => {
