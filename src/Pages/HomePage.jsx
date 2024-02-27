@@ -3,6 +3,7 @@ import CardComponent from "../Components/CardComponent";
 import { db } from "../Firebase";
 import { collection, getDoc, getDocs, query } from "firebase/firestore";
 import TypewriterEffectDemo from "../Components/TextWriter";
+import { BackgroundBoxesDemo } from "../Components/BackgroundBoxes";
 
 const HomePage = () => {
   const [songs, getSongs] = useState([]);
@@ -23,7 +24,7 @@ const HomePage = () => {
 
   return (
     <>
-      <TypewriterEffectDemo />
+      <BackgroundBoxesDemo />
       <div className="flex gap-x-2 flex-wrap gap-y-1">
         {songs.map((data) => {
           return (
