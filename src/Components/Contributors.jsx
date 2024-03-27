@@ -4,7 +4,7 @@ const people = [
   {
     id: 1,
     name: "Shajid Shafee",
-    designation: "Full Stack Engineer",
+    designation: "Full Stack Web Engineer",
     image: "https://shajid-blog-react.netlify.app/assets/Shajid-E393mccF.png",
   },
   {
