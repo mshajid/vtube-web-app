@@ -87,10 +87,6 @@ and
 for validation, used Zod
     
 ### Screenshots
-
+(WIP)
 - Initial draftings of form and output card
-![alt text](<WhatsApp Image 2024-02-26 at 10.36.39_15ff28f7.jpg>)
-
-![alt text](<WhatsApp Image 2024-02-26 at 10.36.39_8978c41b.jpg>)
-
 - Initial UI draft
