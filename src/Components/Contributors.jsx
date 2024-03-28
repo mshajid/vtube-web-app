@@ -10,13 +10,13 @@ const people = [
   {
     id: 2,
     name: "Bearcin Sweety",
-    designation: "Full Stack Web Engineer",
+    designation: "Full Stack Engineer",
     image: "https://avatars.githubusercontent.com/u/108384050?v=4",
   },
   {
     id: 3,
     name: "Gayathree Gangathar",
-    designation: "Full Stack Web Engineer",
+    designation: "Full Stack Engineer",
     image: "https://avatars.githubusercontent.com/u/102051237?v=4",
   },
 ];
